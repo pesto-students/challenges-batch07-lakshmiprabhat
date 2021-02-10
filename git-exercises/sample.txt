@@ -1,1 +1,2 @@
 Hello World!
+New changes added to sample file.
