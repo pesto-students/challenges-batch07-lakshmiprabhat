@@ -1,26 +1,26 @@
 function balancedBraces (str) {
   let stack = [];
 
-    let openBracesArray = {
+    let openBracesObj = {
         '{': '}',
         '[': ']',
         '(': ')'
     };
 
-    let closedBracesArray = {
+    let closedBracesObj = {
         '}': true,
         ']': true,
         ')': true
     }
 
-    for (let i = 0; i < str.length; i++) {
+    for (let i in str) {
 
         let char = str[i];
 
-        if (openBracesArray[char]) {
+        if (openBracesObj[char]) {
             stack.push(char);
-        } else if (closedBracesArray[char]) {
-            if (openBracesArray[stack.pop()] !== char) 
+        } else if (closedBracesObj[char]) {
+            if (openBracesObj[stack.pop()] !== char) 
             { 
                 return false;
             }
