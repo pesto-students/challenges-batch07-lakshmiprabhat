@@ -52,22 +52,22 @@ export default class LinkList {
   }
 
   contains(value) {
-    let curr = this.head;
-    while (curr) {
-      if (curr.value === value) {
+    let current = this.head;
+    while (current) {
+      if (current.value === value) {
         return true;
       }
-      curr = curr.next;
+      current = current.next;
     }
     return false;
   }
 
   length() {
-    let curr = this.head;
+    let current = this.head;
     let count = 0;
-    while (curr) {
+    while (current) {
       count += 1;
-      curr = curr.next;
+      current = current.next;
     }
     return count;
   }
